@@ -19,7 +19,7 @@ describe("word_calc") do
   end
 
   it("solves for multiple operators") do
-    word_calc("8 times 3 minus 4").should(eq(20))
+    word_calc("8 times 3 minus 4?").should(eq(20))
   end
 
 end
@@ -27,5 +27,8 @@ end
 describe("multiple_calc") do
   it("solves multiple problems within the same string") do
     multiple_calc("8 times 3? 5 minus 2?").should(eq([24, 3]))
+  end
+  it("solves multiple problems within the same string") do
+    multiple_calc("2 to the power of 3 minus 5 plus 1? 5 minus 2?").should(eq([4, 3]))
   end
 end
